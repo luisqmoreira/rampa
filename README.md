@@ -21,14 +21,27 @@ Copy `.env.example` to `.env.local` and set:
 RESEND_API_KEY=
 CONTACT_TO_EMAIL=hello@rampalabs.com
 CONTACT_FROM_EMAIL=Rampa Labs <website@rampalabs.com>
-NEXT_PUBLIC_BOOKING_URL=https://cal.com/rampalabs/workflow-audit
+NEXT_PUBLIC_BOOKING_URL=https://cal.eu/luis-moreira/30min
 ```
 
 If the Resend variables are not set, valid submissions are accepted locally and logged by the server. For production storage, connect the API route to Supabase, Airtable, HubSpot, or another CRM before launch.
 
-## Booking CTA
+## Cal.com Booking
 
-Set `NEXT_PUBLIC_BOOKING_URL` to a Calendly, Cal.com, HubSpot Meetings, or other booking link. All booking buttons use this value.
+Set `NEXT_PUBLIC_BOOKING_URL` to your Cal.com event link. All booking buttons and the inline booking embed use this value.
+
+Recommended Cal.com event setup:
+
+- Event name: `Free Workflow Audit`
+- URL slug: `workflow-audit`
+- Duration: `30 minutes`
+- Calendar: connect your Google Calendar account
+- Location: Google Meet
+- Buffer: `15 minutes before` and `15 minutes after`
+- Availability: use 2-3 controlled windows per week
+- Invitee questions: company website, industry, current tools, and what they want to automate
+
+After changing `NEXT_PUBLIC_BOOKING_URL`, restart `npm run dev` so Next.js picks up the new public environment variable.
 
 ## Deployment
 

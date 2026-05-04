@@ -1,3 +1,4 @@
+import { CalBooking } from "@/components/cal-booking";
 import { ContactForm } from "@/components/contact-form";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -67,7 +68,7 @@ const outcomes = [
 ];
 
 const bookingUrl =
-  process.env.NEXT_PUBLIC_BOOKING_URL || "https://cal.com/rampalabs/workflow-audit";
+  process.env.NEXT_PUBLIC_BOOKING_URL || "https://cal.eu/luis-moreira/30min";
 
 export default function Home() {
   return (
@@ -262,7 +263,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div id="contact" className="scroll-mt-24 rounded-lg border border-[var(--line)] bg-[rgba(7,19,31,0.42)] p-5 md:p-7">
+              <div id="contact" className="scroll-mt-24 space-y-7 rounded-lg border border-[var(--line)] bg-[rgba(7,19,31,0.42)] p-5 md:p-7">
                 <div className="mb-8 border-b border-[var(--line)] pb-6">
                   <h3 className="text-xl font-semibold">Book or send an enquiry</h3>
                   <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
@@ -271,6 +272,13 @@ export default function Home() {
                   <a className="focus-ring mt-5 inline-flex min-h-11 items-center justify-center rounded-md bg-[var(--accent)] px-4 text-sm font-semibold text-white" href={bookingUrl}>
                     Open booking calendar
                   </a>
+                </div>
+                <CalBooking bookingUrl={bookingUrl} />
+                <div className="border-t border-[var(--line)] pt-7">
+                  <h4 className="text-base font-semibold">Send workflow details</h4>
+                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                    Prefer to explain the problem first? Send the details and we’ll respond shortly.
+                  </p>
                 </div>
                 <ContactForm />
               </div>
