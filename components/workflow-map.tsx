@@ -8,36 +8,36 @@ const nodes = [
 
 export function WorkflowMap() {
   return (
-    <div className="relative overflow-hidden rounded-lg border border-[var(--line)] bg-[linear-gradient(145deg,rgba(13,31,47,0.96),rgba(7,19,31,0.98))] p-5 shadow-[0_28px_90px_rgba(0,0,0,0.24)] md:p-7">
-      <div className="absolute right-0 top-0 h-44 w-44 -translate-y-1/3 translate-x-1/3 rounded-full bg-[rgba(47,109,246,0.18)] blur-3xl" aria-hidden="true" />
+    <div className="relative overflow-hidden rounded-lg border border-[var(--line)] bg-[linear-gradient(145deg,rgba(13,31,47,0.96),rgba(7,19,31,0.98))] p-4 shadow-[0_28px_90px_rgba(0,0,0,0.24)] md:p-5">
+      <div className="absolute right-0 top-0 h-36 w-36 -translate-y-1/3 translate-x-1/3 rounded-full bg-[rgba(47,109,246,0.18)] blur-3xl" aria-hidden="true" />
       <div className="relative">
-        <div className="mb-8 flex items-center justify-between border-b border-[var(--line)] pb-5">
+        <div className="mb-5 flex items-center justify-between border-b border-[var(--line)] pb-4">
           <p className="text-sm font-semibold text-[var(--cream-soft)]">Operations system</p>
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--muted)]">Live layer</p>
         </div>
 
-        <div className="grid gap-3">
+        <div className="grid gap-2.5">
           {nodes.map(([title, copy], index) => (
             <div className="relative" key={title}>
-              <div className="grid grid-cols-[2.25rem_1fr] items-center gap-4 rounded-md border border-[var(--line)] bg-[rgba(246,241,234,0.045)] p-4">
-                <span className="flex h-9 w-9 items-center justify-center rounded-md border border-[rgba(246,241,234,0.18)] bg-[rgba(47,109,246,0.14)] text-[var(--accent)]">
+              <div className="grid grid-cols-[2rem_1fr] items-center gap-3 rounded-md border border-[var(--line)] bg-[rgba(246,241,234,0.045)] p-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-md border border-[rgba(246,241,234,0.18)] bg-[rgba(47,109,246,0.14)] text-[var(--accent)]">
                   <NodeIcon index={index} />
                 </span>
                 <div>
-                  <h2 className="text-base font-semibold text-[var(--cream-soft)]">{title}</h2>
-                  <p className="mt-1 text-sm leading-6 text-[var(--muted)]">{copy}</p>
+                  <h2 className="text-sm font-semibold text-[var(--cream-soft)] md:text-base">{title}</h2>
+                  <p className="mt-0.5 text-xs leading-5 text-[var(--muted)] md:text-sm">{copy}</p>
                 </div>
               </div>
               {index < nodes.length - 1 ? (
-                <div className="ml-[2.1rem] h-4 w-px bg-[rgba(246,241,234,0.2)]" aria-hidden="true" />
+                <div className="ml-[1.9rem] h-3 w-px bg-[rgba(246,241,234,0.2)]" aria-hidden="true" />
               ) : null}
             </div>
           ))}
         </div>
 
-        <div className="mt-8 rounded-md border border-[rgba(47,109,246,0.28)] bg-[rgba(47,109,246,0.12)] p-4">
+        <div className="mt-5 rounded-md border border-[rgba(47,109,246,0.28)] bg-[rgba(47,109,246,0.12)] p-3">
           <p className="text-sm font-semibold text-[var(--cream-soft)]">Manual work becomes operating signal.</p>
-          <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+          <p className="mt-1 text-xs leading-5 text-[var(--muted)] md:text-sm">
             Fewer disconnected updates, clearer reporting, faster action.
           </p>
         </div>
@@ -64,7 +64,7 @@ function NodeIcon({ index }: { index: number }) {
   ];
 
   return (
-    <svg aria-hidden="true" className="h-5 w-5" viewBox="0 0 24 24">
+    <svg aria-hidden="true" className="h-4 w-4 md:h-5 md:w-5" viewBox="0 0 24 24">
       {icons[index]}
     </svg>
   );

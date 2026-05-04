@@ -74,20 +74,20 @@ export default function Home() {
     <>
       <Header bookingUrl={bookingUrl} />
       <main className="overflow-hidden bg-[var(--background)]">
-        <section className="relative border-b border-[var(--line)] pt-14 md:pt-24" aria-labelledby="hero-title">
+        <section className="relative border-b border-[var(--line)] pt-10 md:pt-0" aria-labelledby="hero-title">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_10%,rgba(47,109,246,0.2),transparent_30%),linear-gradient(180deg,#07131f_0%,#0d1f2f_100%)]" aria-hidden="true" />
-          <div className="container relative grid gap-12 pb-20 md:grid-cols-[1.02fr_0.98fr] md:items-center md:pb-28">
+          <div className="container relative grid gap-8 pb-12 md:min-h-[min(780px,calc(100vh-4rem-96px))] md:grid-cols-[0.98fr_1.02fr] md:items-center md:pb-8">
             <div>
               <h1
                 id="hero-title"
-                className="max-w-3xl text-5xl font-semibold leading-[1.02] tracking-normal text-[var(--cream-soft)] md:text-7xl"
+                className="max-w-3xl text-5xl font-semibold leading-[1.02] tracking-normal text-[var(--cream-soft)] md:text-6xl xl:text-[4.25rem]"
               >
                 Automation systems for growing businesses stuck in spreadsheets.
               </h1>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl">
+              <p className="mt-6 max-w-2xl text-base leading-7 text-[var(--muted)] md:text-lg md:leading-8">
                 Rampa Labs helps marketplace sellers, property firms, and operationally heavy SMEs replace manual reporting, repetitive admin, and disconnected workflows with practical automation systems.
               </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <a
                   className="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-[var(--cream-soft)] px-5 text-sm font-semibold text-[var(--ink)] transition hover:bg-white"
                   href={bookingUrl}
