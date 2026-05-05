@@ -60,11 +60,11 @@ const niches = [
 ];
 
 const outcomes = [
-  "Save 10-15 hours per week on manual reporting.",
-  "Reduce spreadsheet errors and duplicated work.",
-  "Get weekly visibility on revenue, margin, stock, and cash flow.",
-  "Automate repetitive supplier, customer, or internal admin.",
-  "Give founders cleaner information for faster decisions.",
+  "Reporting packs that no longer take a full morning to assemble.",
+  "Cleaner weekly visibility across revenue, margin, stock, and cash flow.",
+  "Fewer spreadsheet errors, duplicated updates, and manual handoffs.",
+  "Supplier, customer, and internal admin routed without founder chasing.",
+  "Earlier warnings on margin drops, stock risk, project cost, or cash pressure.",
 ];
 
 const bookingUrl =
@@ -83,10 +83,10 @@ export default function Home() {
                 id="hero-title"
                 className="max-w-3xl text-5xl font-semibold leading-[1.02] tracking-normal text-[var(--cream-soft)] md:text-6xl xl:text-[4.25rem]"
               >
-                Automation systems for growing businesses stuck in spreadsheets.
+                Stop running your business from spreadsheets.
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-7 text-[var(--muted)] md:text-lg md:leading-8">
-                Rampa Labs helps marketplace sellers, property firms, and operationally heavy SMEs replace manual reporting, repetitive admin, and disconnected workflows with practical automation systems.
+                Rampa Labs helps marketplace sellers, property firms, and operationally heavy SMEs replace manual reporting, repetitive admin, and disconnected workflows with practical automation systems built by operators, not another platform to manage.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -119,6 +119,14 @@ export default function Home() {
               <p className="mt-5">
                 Rampa Labs turns those recurring bottlenecks into practical workflows, dashboards, and alerts that are easier for the team to run.
               </p>
+              <div className="mt-8 grid gap-4 rounded-lg border border-[var(--line-dark)] bg-[rgba(255,255,255,0.34)] p-5 md:grid-cols-[0.34fr_0.66fr] md:p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+                  Operator-led
+                </p>
+                <p className="text-sm leading-7 text-[var(--muted-dark)]">
+                  Built by an operator with experience across marketplace analytics, supplier operations, commercial reporting, and European SME workflows. The work starts with how the business actually runs, then turns the repeatable parts into systems.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -213,10 +221,10 @@ export default function Home() {
             <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
               <div>
                 <h2 id="outcomes-title" className="text-3xl font-semibold leading-tight text-[var(--cream-soft)] md:text-5xl">
-                  Typical outcomes
+                  Systems we build to remove the drag
                 </h2>
                 <p className="mt-5 text-base leading-8 text-[var(--muted)]">
-                  These are examples from the kinds of operational problems we target, not guaranteed results.
+                  Every build depends on the workflow, but the goal is consistent: fewer manual updates, cleaner reporting, and faster operating decisions.
                 </p>
               </div>
               <ul className="grid gap-4 sm:grid-cols-2">
@@ -239,8 +247,32 @@ export default function Home() {
               Operator-led, not software-first.
             </h2>
             <p className="text-lg leading-8 text-[var(--muted-dark)]">
-              Rampa Labs is built for business owners who need practical systems, not another platform to manage. We focus on the operational layer: reporting, workflows, automations, and the manual processes that quietly drain time and margin. Our work is informed by marketplace, e-commerce, analytics, and operations experience.
+              Rampa Labs is built for business owners who need practical systems, not another platform to manage. We focus on the operational layer: reporting, workflows, automations, and the manual processes that quietly drain time and margin.
             </p>
+          </div>
+        </section>
+
+        <section className="bg-[var(--navy)] py-16 md:py-24" aria-labelledby="resource-title">
+          <div className="container grid gap-8 rounded-lg border border-[var(--line)] bg-[rgba(246,241,234,0.045)] p-6 text-[var(--cream-soft)] md:grid-cols-[0.78fr_1.22fr] md:p-10">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">Free checklist</p>
+              <h2 id="resource-title" className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+                5 workflows every Amazon seller should review.
+              </h2>
+            </div>
+            <div>
+              <p className="text-base leading-8 text-[var(--muted)] md:text-lg">
+                A simple outreach asset for sellers who are not ready to book yet: reporting, inventory, supplier updates, ad spend checks, and weekly performance packs.
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <a className="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-[var(--cream-soft)] px-5 text-sm font-semibold text-[var(--ink)]" href="#contact">
+                  Request the checklist
+                </a>
+                <a className="focus-ring inline-flex min-h-12 items-center justify-center rounded-md border border-[var(--line)] px-5 text-sm font-semibold text-[var(--cream-soft)]" href={bookingUrl}>
+                  Book the audit instead
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -277,7 +309,7 @@ export default function Home() {
                 <div className="border-t border-[var(--line)] pt-7">
                   <h4 className="text-base font-semibold">Send workflow details</h4>
                   <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-                    Prefer to explain the problem first? Send the details and we’ll respond shortly.
+                    Prefer to explain the problem first? Send the bottleneck and we’ll respond shortly.
                   </p>
                 </div>
                 <ContactForm />

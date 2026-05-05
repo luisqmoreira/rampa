@@ -4,27 +4,7 @@ import { z } from "zod";
 const contactSchema = z.object({
   name: z.string().trim().min(2).max(120),
   email: z.string().trim().email().max(180),
-  company: z.string().trim().min(2).max(160),
-  website: z.string().trim().url().max(240),
-  industry: z.enum([
-    "Amazon / marketplace seller",
-    "Construction / property management",
-    "E-commerce / D2C",
-    "Hospitality",
-    "Recruitment / staffing",
-    "Other",
-  ]),
-  revenue: z.enum([
-    "Under £500k",
-    "£500k-£1m",
-    "£1m-£5m",
-    "£5m-£10m",
-    "£10m+",
-    "Prefer not to say",
-  ]),
   automationGoal: z.string().trim().min(10).max(2500),
-  tools: z.string().trim().min(2).max(1500),
-  contactMethod: z.enum(["Email", "Phone", "WhatsApp"]),
   consent: z.literal("yes"),
   websiteUrl: z.string().optional(),
 });
@@ -58,21 +38,13 @@ export async function POST(request: Request) {
         from: fromEmail,
         to: [toEmail],
         reply_to: submission.email,
-        subject: `New workflow audit enquiry from ${submission.company}`,
+        subject: `New workflow enquiry from ${submission.name}`,
         text: [
           `Name: ${submission.name}`,
           `Email: ${submission.email}`,
-          `Company: ${submission.company}`,
-          `Website: ${submission.website}`,
-          `Industry: ${submission.industry}`,
-          `Revenue: ${submission.revenue}`,
-          `Preferred contact method: ${submission.contactMethod}`,
           "",
-          "What they want to automate:",
+          "Biggest operational bottleneck:",
           submission.automationGoal,
-          "",
-          "Current tools:",
-          submission.tools,
         ].join("\n"),
       }),
     });
@@ -85,9 +57,8 @@ export async function POST(request: Request) {
     }
   } else {
     console.info("Contact form submission received without email delivery configured", {
-      company: submission.company,
+      name: submission.name,
       email: submission.email,
-      industry: submission.industry,
     });
   }
 

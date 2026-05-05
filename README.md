@@ -13,7 +13,7 @@ Open `http://localhost:3000`.
 
 ## Contact Form
 
-The form posts to `app/api/contact/route.ts`. It validates submissions, includes a honeypot spam field, shows a confirmation message, and sends email through Resend when configured.
+The form posts to `app/api/contact/route.ts`. It validates a low-friction enquiry flow, includes a honeypot spam field, shows a confirmation message, and sends email through Resend when configured.
 
 Copy `.env.example` to `.env.local` and set:
 
@@ -40,6 +40,8 @@ Recommended Cal.com event setup:
 - Buffer: `15 minutes before` and `15 minutes after`
 - Availability: use 2-3 controlled windows per week
 - Invitee questions: company website, industry, current tools, and what they want to automate
+
+The on-page enquiry form intentionally asks only for name, work email, and the biggest operational bottleneck. Use the Cal.com invitee questions to qualify booked calls in more detail.
 
 After changing `NEXT_PUBLIC_BOOKING_URL`, restart `npm run dev` so Next.js picks up the new public environment variable.
 
