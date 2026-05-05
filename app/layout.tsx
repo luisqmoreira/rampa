@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rampa Labs | Automation Systems for Growing SMEs",
+  title: "Rampa Labs | Stop running your business from spreadsheets",
   description:
-    "Rampa Labs builds practical automation systems, dashboards, and workflows for marketplace sellers, property firms, and operationally heavy SMEs.",
+    "Operator-led automation systems, dashboards, and workflows for SMEs that have outgrown spreadsheets.",
   keywords: [
     "SME automation",
     "workflow automation",
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     "business process automation",
   ],
   openGraph: {
-    title: "Rampa Labs | Automation Systems for Growing SMEs",
+    title: "Rampa Labs | Stop running your business from spreadsheets",
     description:
-      "Practical automation systems, dashboards, and workflows for operationally heavy SMEs.",
+      "Operator-led automation systems, dashboards, and workflows for SMEs that have outgrown spreadsheets.",
     type: "website",
   },
 };
