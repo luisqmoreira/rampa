@@ -279,7 +279,7 @@ export default function Home() {
                 <>
                   Most SMEs aren&apos;t <em>under-tooled</em>.
                   <br />
-                  They&apos;re <span className="strike">over-spreadsheeted</span>.
+                  They&apos;re over-spreadsheeted.
                 </>
               }
               lede="The same patterns show up in nearly every audit. Reports that take a day to assemble. Reorder decisions made from instinct. Three people manually reconciling the same numbers, slightly differently. We see it because we've lived it."
