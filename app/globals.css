@@ -414,7 +414,6 @@
   display: grid;
   align-self: start;
   min-height: 520px;
-  margin-top: calc(clamp(44px, 6.4vw, 96px) * 3.63);
   overflow: hidden;
   aspect-ratio: 1.05 / 1;
   grid-template-rows: auto 1fr;
