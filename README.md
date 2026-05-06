@@ -21,7 +21,7 @@ Copy `.env.example` to `.env.local` and set:
 RESEND_API_KEY=
 CONTACT_TO_EMAIL=hello@rampalabs.com
 CONTACT_FROM_EMAIL=Rampa Labs <website@rampalabs.com>
-NEXT_PUBLIC_BOOKING_URL=https://cal.eu/luis-moreira/30min
+NEXT_PUBLIC_BOOKING_URL=https://cal.eu/luisqm/15min
 ```
 
 If the Resend variables are not set, valid submissions are accepted locally and logged by the server. For production storage, connect the API route to Supabase, Airtable, HubSpot, or another CRM before launch.

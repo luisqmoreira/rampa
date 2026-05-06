@@ -2,7 +2,7 @@ import { ContactForm } from "@/components/contact-form";
 import { Footer } from "@/components/footer";
 import type { ReactNode } from "react";
 
-const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "https://cal.eu/luis-moreira/30min";
+const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "https://cal.eu/luisqm/15min";
 
 const tools = [
   "SHOPIFY",
